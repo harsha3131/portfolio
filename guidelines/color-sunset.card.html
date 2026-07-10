@@ -1,0 +1,28 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Sunset Accent" subtitle="Primary coral→amber ramp" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-body); background: var(--surface-card); padding: 20px; }
+  .row { display:flex; gap:10px; }
+  .sw { flex:1; height:84px; border-radius: var(--radius-sm); display:flex; align-items:flex-end; padding:8px; box-sizing:border-box; }
+  .sw span { font: 600 11px var(--font-mono); color:#fff; text-shadow:0 1px 2px rgba(0,0,0,.3); }
+  .dark span { color: var(--neutral-800); text-shadow:none; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw dark" style="background:var(--sunset-50)"><span>50</span></div>
+    <div class="sw dark" style="background:var(--sunset-100)"><span>100</span></div>
+    <div class="sw dark" style="background:var(--sunset-200)"><span>200</span></div>
+    <div class="sw" style="background:var(--sunset-300)"><span>300</span></div>
+    <div class="sw" style="background:var(--sunset-400)"><span>400 ★</span></div>
+    <div class="sw" style="background:var(--sunset-500)"><span>500</span></div>
+    <div class="sw" style="background:var(--sunset-600)"><span>600</span></div>
+    <div class="sw" style="background:var(--sunset-700)"><span>700</span></div>
+    <div class="sw" style="background:var(--amber-400)"><span>amber</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* ============================================================
+   COLORS — warm sunset accent over light, airy neutrals.
+   Base palette + semantic aliases.
+   ============================================================ */
+
+:root {
+  /* --- Warm sunset accent (coral → amber) --- */
+  --sunset-50:  #fff4ed;
+  --sunset-100: #ffe6d5;
+  --sunset-200: #ffc9aa;
+  --sunset-300: #ffa274;
+  --sunset-400: #ff7a45;   /* coral */
+  --sunset-500: #fb5c1c;
+  --sunset-600: #ec4310;   /* primary press */
+  --sunset-700: #c3300f;
+  --amber-300:  #ffc46b;
+  --amber-400:  #ffab42;   /* amber highlight */
+  --amber-500:  #f5920f;
+
+  /* Signature gradient (coral → amber) */
+  --grad-sunset: linear-gradient(120deg, #ff7a45 0%, #ffab42 100%); /* @kind color */
+  --grad-sunset-soft: linear-gradient(120deg, #ff7a4533 0%, #ffab4233 100%); /* @kind color */
+
+  /* --- Neutrals — warm-tinted slate, never pure gray --- */
+  --neutral-0:   #ffffff;
+  --neutral-50:  #faf8f6;
+  --neutral-100: #f3efea;
+  --neutral-200: #e7e0d8;
+  --neutral-300: #d3c9bd;
+  --neutral-400: #a89c8d;
+  --neutral-500: #7c7164;
+  --neutral-600: #5b5247;
+  --neutral-700: #403a32;
+  --neutral-800: #2a2620;
+  --neutral-900: #1a1714;
+
+  /* --- Semantic / status --- */
+  --success-500: #2f9e6b;
+  --success-50:  #e8f6ef;
+  --warning-500: #e8a317;
+  --warning-50:  #fdf3dc;
+  --danger-500:  #e0492f;
+  --danger-50:   #fceae6;
+  --info-500:    #3b7bd4;
+  --info-50:     #e8f0fc;
+
+  /* --- Glass tint layers (translucent, for frosted surfaces) --- */
+  --glass-white:        rgba(255, 255, 255, 0.55);
+  --glass-white-strong: rgba(255, 255, 255, 0.72);
+  --glass-white-faint:  rgba(255, 255, 255, 0.35);
+  --glass-border:       rgba(255, 255, 255, 0.65);
+  --glass-border-soft:  rgba(255, 255, 255, 0.30);
+  --glass-tint-warm:    rgba(255, 138, 80, 0.10);
+  --glass-shadow-tint:  rgba(64, 40, 20, 0.18);
+
+  /* ===== Semantic aliases ===== */
+  --color-primary:       var(--sunset-400);
+  --color-primary-hover: var(--sunset-500);
+  --color-primary-press: var(--sunset-600);
+  --color-on-primary:    #ffffff;
+
+  --text-strong:   var(--neutral-900);
+  --text-body:     var(--neutral-700);
+  --text-muted:    var(--neutral-500);
+  --text-faint:    var(--neutral-400);
+  --text-on-glass: var(--neutral-800);
+  --text-inverse:  var(--neutral-0);
+  --text-accent:   var(--sunset-600);
+
+  --surface-page:    var(--neutral-50);
+  --surface-card:    var(--neutral-0);
+  --surface-sunk:    var(--neutral-100);
+  --surface-glass:   var(--glass-white);
+  --surface-overlay: rgba(26, 23, 20, 0.45);
+
+  --border-subtle: var(--neutral-200);
+  --border-strong: var(--neutral-300);
+  --border-glass:  var(--glass-border);
+
+  --focus-ring: rgba(255, 122, 69, 0.45);
+}

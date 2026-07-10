@@ -1,0 +1,171 @@
+// Resume content — Sri Harsha Joshi, Senior AI/ML Engineer.
+window.PF = {
+  name: 'Sri Harsha Joshi',
+  firstName: 'Sri Harsha',
+  role: 'Senior AI/ML Engineer',
+  location: 'Milwaukee, WI',
+  phone: '+1 (414) 595-6127',
+  email: 'sriharshajoshi31@gmail.com',
+  linkedin: 'https://linkedin.com/in/sri-harsha-joshi-4ba14a207',
+  github: 'https://github.com/harsha3131',
+  summary: 'Five-plus years building and deploying production-grade machine learning — LLMs, GenAI pipelines, RAG architectures, and MLOps at scale on AWS. From data ingestion to fine-tuning, vector search, and real-time inference.',
+
+  heroStats: [
+    { to: 5, suffix: '+', decimals: 0, label: 'years in production ML' },
+    { to: 30, suffix: '%', decimals: 0, label: 'lift in customer retention' },
+    { to: 40, suffix: '%', decimals: 0, label: 'fewer security incidents' },
+    { to: 50, prefix: '<', suffix: 'ms', decimals: 0, label: 'inference latency' },
+  ],
+
+  experience: [
+    {
+      id: 'assurant',
+      company: 'Assurant',
+      title: 'Senior AI/ML Engineer',
+      dates: 'Dec 2024 – Present',
+      chips: ['−35% handle time', '+30% retention', '−40% incidents', '−20% cloud cost'],
+      bullets: [
+        'Architected an end-to-end RAG customer intelligence platform (LangChain, Pinecone, Claude 3) for dynamic policy Q&A across 2M+ documents — agent handle time down 35%, contributing to a 30% lift in retention.',
+        'Designed a real-time churn prediction system on XGBoost + SageMaker Pipelines serving 500K+ customers daily at sub-50ms latency, monitored for drift with Evidently AI.',
+        'Built an LLM-powered anomaly detection engine on fine-tuned Llama 3 (QLoRA) over behavioral access logs — unauthorized access incidents down 40%, catching novel attack patterns rule-based systems missed.',
+        'Led ML infrastructure modernization on AWS (SageMaker, Bedrock, Lambda) with spot-instance scaling and intelligent model caching — cloud costs down 20%, inference latency down 18%.',
+        'Established team-wide MLOps standards — MLflow tracking, model registry, automated retraining, A/B framework — cutting deployment cycles from 2 weeks to 3 days.',
+        'Mentored 4 engineers on LLM integration, prompt engineering, and responsible AI evaluation; 85%+ post-release satisfaction across 2 major AI launches per quarter.',
+      ],
+    },
+    {
+      id: 'brightmind',
+      company: 'Bright Mind Technologies',
+      title: 'ML Engineer',
+      dates: 'Jan 2022 – May 2023',
+      chips: ['+28% engagement', '10M+ daily events', 'p99 280→90ms'],
+      bullets: [
+        'Designed a multi-modal recommendation engine — collaborative filtering (LightGBM) plus semantic similarity (Sentence-BERT + FAISS) — lifting content engagement 28% in A/B experiments.',
+        'Built end-to-end ML pipelines with Airflow and Kafka for real-time feature engineering across 10M+ daily events, feeding production classification and ranking models.',
+        'Spearheaded a zero-downtime on-prem → AWS migration, standardizing on SageMaker — ML iteration cycle down 40%, operational costs down 15%.',
+        'Implemented automated monitoring with Evidently AI + CloudWatch: drift detected within hours, retraining triggered automatically — degradation incidents from monthly to near-zero.',
+        'Optimized PostgreSQL and Elasticsearch for low-latency feature serving — p99 inference latency from 280ms to 90ms.',
+        'Achieved 98% automated test coverage on ML service APIs (TDD/BDD), enabling rapid model iteration without regression risk.',
+      ],
+    },
+    {
+      id: 'macro',
+      company: 'Macro Software Solutions',
+      title: 'Software Developer · ML Focus',
+      dates: 'May 2020 – Dec 2021',
+      chips: ['−22% misrouting', '+20 CSAT pts', '$500K+ renewals'],
+      bullets: [
+        'Developed an NLP ticket classification and routing system on fine-tuned BERT — support misrouting down 22%, average resolution time down 18%.',
+        'Built predictive analytics dashboards pairing scikit-learn models with a React frontend, lifting client satisfaction scores by 20 points over 6 months.',
+        'Designed a centralized logging and ML observability system (ELK Stack, still in production) — incident detection time improved 35%.',
+        'Delivered 3 ML-enhanced client projects on time and on budget, contributing to $500K+ in renewals and expansion revenue.',
+      ],
+    },
+  ],
+
+  skillGroups: [
+    { name: 'Languages', icon: 'code-2', skills: ['Python', 'SQL', 'Java', 'Bash', 'JavaScript / TypeScript'] },
+    { name: 'ML & AI', icon: 'brain-circuit', skills: ['PyTorch', 'TensorFlow', 'scikit-learn', 'XGBoost', 'LightGBM', 'Hugging Face Transformers', 'LangChain', 'LlamaIndex', 'OpenAI API', 'Anthropic API'] },
+    { name: 'GenAI & LLMs', icon: 'sparkles', skills: ['RAG pipelines', 'Prompt engineering', 'LoRA / QLoRA fine-tuning', 'RLHF', 'GPT-4', 'Claude 3', 'Llama 3', 'Mistral', 'Function calling', 'Agents'] },
+    { name: 'Vector DBs', icon: 'database', skills: ['Pinecone', 'Weaviate', 'FAISS', 'ChromaDB', 'pgvector'] },
+    { name: 'MLOps', icon: 'workflow', skills: ['MLflow', 'Weights & Biases', 'Apache Airflow', 'Kafka', 'Spark', 'Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins'] },
+    { name: 'AWS', icon: 'cloud', skills: ['SageMaker', 'Bedrock', 'Lambda', 'EC2', 'S3', 'RDS', 'CloudWatch', 'IAM', 'Step Functions'] },
+    { name: 'Databases', icon: 'server', skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Cassandra', 'Elasticsearch', 'Redis'] },
+    { name: 'Observability', icon: 'activity', skills: ['Evidently AI', 'Prometheus', 'Grafana', 'CloudWatch', 'Datadog'] },
+    { name: 'Other', icon: 'boxes', skills: ['Terraform', 'REST / GraphQL APIs', 'Spring Boot', 'Microservices', 'Agile / Scrum', 'TDD / BDD'] },
+  ],
+
+  projects: [
+    {
+      id: 'rag-chatbot',
+      title: 'Enterprise RAG Chatbot',
+      icon: 'messages-square',
+      stat: { value: '91%', label: 'answer accuracy on held-out evals' },
+      tags: ['LlamaIndex', 'Pinecone', 'GPT-4', 'FastAPI'],
+      github: 'https://github.com/harsha3131/enterprise-rag-chatbot',
+      blurb: 'Production RAG with multi-document reasoning over 500K+ knowledge base articles.',
+      bullets: [
+        'Cross-document reasoning over 500K+ knowledge base articles at 91% answer accuracy on a held-out eval set.',
+        'Hybrid retrieval (dense + sparse BM25) with Cohere re-ranking — hallucination rate down 38% vs. naive vector search; deployed as a FastAPI microservice on AWS Lambda.',
+        'Conversational memory on Redis with session-based context — 10-turn coherent multi-hop Q&A at sub-200ms p95 end-to-end latency.',
+      ],
+    },
+    {
+      id: 'llm-finetuning',
+      title: 'Insurance LLM Fine-Tuning',
+      icon: 'flask-conical',
+      stat: { value: '94%', label: 'domain accuracy vs. 71% zero-shot' },
+      tags: ['Mistral-7B', 'QLoRA', 'SageMaker', 'MLflow'],
+      github: 'https://github.com/harsha3131/insurance-llm-finetuning',
+      blurb: 'LoRA/QLoRA pipeline fine-tuning Mistral-7B on 80K+ insurance Q&A pairs.',
+      bullets: [
+        'Fine-tuned Mistral-7B on 80K+ insurance-domain Q&A pairs with QLoRA (4-bit) on SageMaker — 94% domain accuracy vs. 71% from zero-shot GPT-3.5.',
+        'Automated pipeline with Hugging Face PEFT + MLflow: hyperparameter sweeps, checkpoints, ROUGE/BERTScore evals, registry promotion — iteration time down 60%.',
+        'Quantized model on an auto-scaling SageMaker endpoint — monthly inference cost down 72% vs. GPT-4 API at equivalent accuracy.',
+      ],
+    },
+    {
+      id: 'fraud-detection',
+      title: 'Real-Time Fraud Detection',
+      icon: 'shield-check',
+      stat: { value: '97.3%', label: 'AUC-ROC at 1M+ txns/day' },
+      tags: ['Kafka', 'Spark Streaming', 'XGBoost', 'Feast'],
+      github: 'https://github.com/harsha3131/streaming-fraud-detection',
+      blurb: 'Streaming ML pipeline scoring 1M+ transactions a day under 100ms.',
+      bullets: [
+        'Kafka + Spark Structured Streaming + XGBoost pipeline processing 1M+ transactions/day at sub-100ms end-to-end latency, 97.3% AUC-ROC.',
+        '120+ real-time features (velocity, behavioral embeddings, graph signals) via the Feast feature store — feature computation latency down 65% vs. batch.',
+        'Evidently AI drift monitoring with automated retraining on threshold breach — performance held within 0.5% AUC over 6 months.',
+      ],
+    },
+    {
+      id: 'multi-agent',
+      title: 'Multi-Agent Claims Automation',
+      icon: 'workflow',
+      stat: { value: '89%', label: 'straight-through processing' },
+      tags: ['LangChain Agents', 'LangGraph', 'Function calling'],
+      github: 'https://github.com/harsha3131/multi-agent-claims-automation',
+      blurb: 'Autonomous agents running end-to-end insurance claims processing.',
+      bullets: [
+        'Autonomous multi-agent system (LangChain Agents + OpenAI function calling) automating end-to-end claims — 89% straight-through-processing rate.',
+        'Specialized agents (OCR extraction, policy matching, fraud check, decision writing) orchestrated by a LangGraph state machine — manual processing time down 70%, errors down 55%.',
+        'Tool-calling agents wired to internal REST/GraphQL APIs, PostgreSQL, and Elasticsearch — average claim resolution from 3 days to 4 hours.',
+      ],
+    },
+    {
+      id: 'semantic-search',
+      title: 'Semantic Search & Personalization',
+      icon: 'scan-search',
+      stat: { value: '0.83', label: 'MRR@10 · +22% vs. BM25' },
+      tags: ['Sentence-BERT', 'Contrastive learning', 'Airflow'],
+      github: 'https://github.com/harsha3131/semantic-search-engine',
+      blurb: 'Dual-tower neural retrieval across 5M+ catalog items, learning online.',
+      bullets: [
+        'Dual-tower neural retrieval with Sentence-BERT + contrastive learning — MRR@10 of 0.83, +22% vs. a BM25 baseline, across 5M+ catalog items.',
+        'Online learning pipeline folding real-time click-through signals into nightly embedding retraining via Airflow — CTR up 15% over 3 months.',
+      ],
+    },
+  ],
+
+  education: {
+    degree: 'M.S. Computer Science',
+    school: 'University of Wisconsin–Milwaukee',
+    dates: 'Sep 2023 – May 2025',
+    gpa: 'GPA 3.6',
+  },
+
+  certs: [
+    { name: 'AWS Certified Machine Learning – Specialty', year: '2025', status: 'earned' },
+    { name: 'AWS Certified Solutions Architect – Associate', year: '', status: 'in progress' },
+    { name: 'SAP Certified Associate — Master Data Governance', year: '', status: 'earned' },
+    { name: 'DeepLearning.AI — LangChain for LLM App Development', year: '2024', status: 'earned' },
+    { name: 'Hugging Face — Transformers and Fine-Tuning', year: '2024', status: 'earned' },
+  ],
+
+  photos: {
+    bg: '../assets/portfolio/bg.jpg',
+    milwaukee: '../assets/portfolio/milwaukee.jpg',
+    avatar: '../assets/portfolio/avatar.jpg',
+    headshot: '../assets/portfolio/headshot.jpg',
+  },
+};

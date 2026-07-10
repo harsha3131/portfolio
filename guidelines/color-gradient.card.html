@@ -1,0 +1,22 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Signature Gradient" subtitle="Sunset gradient + gradient text" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-body); background: var(--surface-card); padding: 20px; display:flex; gap:16px; align-items:center; }
+  .grad { flex:1; height:120px; border-radius: var(--radius-lg); background: var(--grad-sunset); box-shadow: var(--glow-sunset); }
+  .txt { flex:1; }
+  .big { font: 800 40px var(--font-display); letter-spacing:-0.03em; line-height:1.05; }
+  .lab { font:600 11px var(--font-mono); color:var(--text-muted); margin-top:12px; }
+</style>
+</head>
+<body>
+  <div class="grad"></div>
+  <div class="txt">
+    <div class="big sh-gradient-text">Build it<br>beautifully.</div>
+    <div class="lab">--grad-sunset · .sh-gradient-text</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* Webfonts — modern geometric sans.
+   Sora for display, Plus Jakarta Sans for body/UI.
+   Loaded from Google Fonts CDN (gstatic woff2). If you need to self-host,
+   drop the .woff2 files in assets/fonts/ and repoint the src URLs. */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap');

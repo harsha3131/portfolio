@@ -1,0 +1,65 @@
+/* ============================================================
+   BASE — light resets + helpers consumers can rely on.
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+}
+
+.sh-body-base {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background: var(--surface-page);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Frosted-glass utility — the canonical surface */
+.sh-glass {
+  background: var(--glass-white);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-glass);
+  border-radius: var(--radius-md);
+}
+.sh-glass-strong {
+  background: var(--glass-white-strong);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-glass-lg);
+  border-radius: var(--radius-lg);
+}
+
+/* Photographic background layer helper */
+.sh-bg-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.sh-bg-photo--drift {
+  animation: sh-bg-drift var(--dur-ambient) var(--ease-in-out) infinite;
+}
+/* Light wash so glass + text stay legible over any photo */
+.sh-bg-wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.30), rgba(255,250,245,0.55));
+  z-index: 1;
+}
+
+.sh-gradient-text {
+  background: var(--grad-sunset);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sh-bg-photo--drift { animation: none; }
+}

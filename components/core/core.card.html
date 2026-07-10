@@ -1,0 +1,67 @@
+<!-- @dsCard group="Components" viewport="700x440" name="Core — Buttons, Badges, Avatars, Tags" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-body); position:relative; min-height:440px; overflow:hidden; }
+  .bg { position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1200&q=60') center/cover; }
+  .wash { position:absolute; inset:0; background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,247,240,.6)); }
+  .wrap { position:relative; padding:24px; display:flex; flex-direction:column; gap:18px; }
+  .panel { background:var(--glass-white-strong); backdrop-filter:var(--glass-blur); border:1px solid var(--glass-border); border-radius:var(--radius-lg); box-shadow:var(--shadow-glass); padding:18px 20px; }
+  .lbl { font:600 11px var(--font-mono); color:var(--text-muted); text-transform:uppercase; letter-spacing:.1em; margin-bottom:12px; }
+  .row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+  <div class="bg"></div><div class="wash"></div>
+  <div class="wrap">
+    <div class="panel">
+      <div class="lbl">Buttons</div>
+      <div class="row">
+        <span id="b1"></span><span id="b2"></span><span id="b3"></span><span id="b4"></span><span id="b5"></span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="lbl">Badges &amp; Tags</div>
+      <div class="row" id="badges"></div>
+      <div class="row" id="tags" style="margin-top:12px"></div>
+    </div>
+    <div class="panel">
+      <div class="lbl">Avatars</div>
+      <div class="row" id="avatars"></div>
+    </div>
+  </div>
+
+  <script src="../../_ds_bundle.js"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel">
+    const { Button, Badge, Tag, Avatar } = window.SriHarshaPortfolioDesignSystem_04f779;
+    const m = (id, node) => ReactDOM.createRoot(document.getElementById(id)).render(node);
+    m('b1', <Button>Publish</Button>);
+    m('b2', <Button variant="secondary">Preview</Button>);
+    m('b3', <Button variant="outline">Edit</Button>);
+    m('b4', <Button variant="ghost">Cancel</Button>);
+    m('b5', <Button size="sm" disabled>Disabled</Button>);
+    m('badges', <>
+      <Badge tone="solid">Published</Badge>
+      <Badge tone="success" dot>Live</Badge>
+      <Badge tone="warning">Draft</Badge>
+      <Badge tone="neutral">v2</Badge>
+    </>);
+    m('tags', <>
+      <Tag selected>Design</Tag>
+      <Tag>React</Tag>
+      <Tag onRemove={()=>{}}>TypeScript</Tag>
+    </>);
+    m('avatars', <>
+      <Avatar name="Sri Harsha" ring status="online" />
+      <Avatar src="https://i.pravatar.cc/100?img=12" name="Jane" status="busy" />
+      <Avatar name="Kof Ad" size={40} />
+    </>);
+  </script>
+</body>
+</html>

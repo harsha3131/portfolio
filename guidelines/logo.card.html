@@ -1,0 +1,31 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Logo" subtitle="Wordmark & monogram" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-body); background: var(--surface-card); padding: 0; }
+  .grid { display:flex; }
+  .cell { flex:1; height:200px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; }
+  .onlight { background: var(--surface-page); }
+  .ondark { background: var(--neutral-900); }
+  .lab { font:600 10px var(--font-mono); color:var(--text-muted); }
+  .ondark .lab { color: var(--neutral-400); }
+  img.mark { width:56px; height:56px; }
+  img.word { width:190px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="cell onlight">
+      <img class="word" src="../assets/logo-wordmark.svg" alt="Sri Harsha Portfolio">
+      <div class="lab">logo-wordmark.svg</div>
+    </div>
+    <div class="cell ondark">
+      <img class="mark" src="../assets/logo-mark.svg" alt="SH">
+      <div class="lab">logo-mark.svg · monogram</div>
+    </div>
+  </div>
+</body>
+</html>

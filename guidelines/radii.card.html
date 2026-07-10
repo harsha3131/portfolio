@@ -1,0 +1,26 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Radii" subtitle="Corner radius scale, 18px default" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; font-family: var(--font-body); background: var(--surface-card); padding: 22px; }
+  .row { display:flex; gap:16px; align-items:center; }
+  .c { text-align:center; }
+  .b { width:84px; height:84px; background: var(--surface-sunk); border:1.5px solid var(--border-strong); }
+  .l { font:600 10px var(--font-mono); color:var(--text-muted); margin-top:8px; }
+  .star { color: var(--text-accent); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="c"><div class="b" style="border-radius:var(--radius-xs)"></div><div class="l">xs · 8</div></div>
+    <div class="c"><div class="b" style="border-radius:var(--radius-sm)"></div><div class="l">sm · 12</div></div>
+    <div class="c"><div class="b" style="border-radius:var(--radius-md); border-color:var(--sunset-400)"></div><div class="l star">md · 18 ★</div></div>
+    <div class="c"><div class="b" style="border-radius:var(--radius-lg)"></div><div class="l">lg · 24</div></div>
+    <div class="c"><div class="b" style="border-radius:var(--radius-xl)"></div><div class="l">xl · 32</div></div>
+    <div class="c"><div class="b" style="border-radius:var(--radius-pill)"></div><div class="l">pill</div></div>
+  </div>
+</body>
+</html>
